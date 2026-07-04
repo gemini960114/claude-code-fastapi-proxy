@@ -13,13 +13,16 @@
 
 ```text
 fastapi/
-├── main.py                # FastAPI 核心服務與路由
-├── config.py              # 設定檔載入模組 (環境變數與絕對路徑解析)
-├── transformer.py         # 雙向格式轉換器 (OpenAI <-> Anthropic)
-├── providers.json         # 遠端 API 上游供應商 (如國網中心) 與 API Key 配置
-├── models_portal.json     # 模型別名與工具停用 (disable_tools) 配置
-├── requirements.txt       # 依賴套件清單
-└── .env                   # 系統環境變數配置
+├── main.py                      # FastAPI 核心服務與路由
+├── config.py                    # 設定檔載入模組 (載入與管理 config.json)
+├── transformer.py               # 雙向格式轉換器 (OpenAI <-> Anthropic)
+├── config.json                  # 本地設定檔 (存放伺服器、上游與模型對應配置，此檔案不加入 Git 追蹤)
+├── config.json.example          # 本地設定檔範本 (不含金鑰，可供複製修改)
+├── claude_settings.json.example   # Claude Code 客戶端設定檔範本 (供複製為 ~/.claude.json)
+├── test_proxy.py                # 代理閘道功能單元測試指令碼
+├── requirements.txt             # 依賴套件清單
+├── .gitignore                   # Git 忽略清單 (自動忽略敏感的 config.json 與虛擬環境)
+└── static/                      # 靜態資源資料夾 (包含 Swagger UI 文件離線資源)
 ```
 
 ---
