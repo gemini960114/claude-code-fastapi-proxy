@@ -203,9 +203,9 @@ python main.py
 
 | Model ID (請求的模型 ID) | Display Name (顯示名稱) |
 | :--- | :--- |
-| `claude-haiku-4-5` | `gemma-4-31B-it` |
-| `claude-sonnet-4-6` | `NVIDIA-Nemotron-3-Ultra-550B-A55B` |
-| `claude-opus-4-7` | `Mistral-Large-3-675B-Instruct-2512` |
+| `claude-haiku-4-5` | `MiniMax-M2.7` |
+| `claude-sonnet-4-6` | `MiniMax-M3` |
+| `claude-opus-4-7` | `GLM-5.2` |
 
 ---
 
