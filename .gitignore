@@ -1,0 +1,12 @@
+# Ignore sensitive config file containing API keys
+config.json
+!config.json.example
+
+# Ignore python virtual environments and cache files
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
