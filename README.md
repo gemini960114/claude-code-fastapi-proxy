@@ -1,6 +1,6 @@
-# Jan API Gateway / Proxy (FastAPI)
+# LLM API Gateway / Proxy (FastAPI)
 
-這是一個使用 **FastAPI** 重寫的 **Jan API 伺服器** 代理閘道。它可以將本地端 Anthropic Claude API 規格（如 `/v1/messages`）無縫轉換為 OpenAI 規格（如 `/v1/chat/completions`）並轉發給 **國網中心 (NCHC Inner Medusa)** 或是本地模型（如 `llama.cpp`），並且完整支援：
+這是一個使用 **FastAPI** 撰寫的 **LLM API 代理閘道**。它可以將本地端 Anthropic Claude API 規格（如 `/v1/messages`）無縫轉換為 OpenAI 規格（如 `/v1/chat/completions`）並轉發給 **國網中心 (NCHC Inner Medusa)** 或是本地模型（如 `llama.cpp`），並且完整支援：
 
 - **動態別名對應**：將 `haiku`/`sonnet`/`opus` 等別名自動映射到國網中心真實的模型（如 MiniMax-M2.7, MiniMax-M3 等）。
 - **進階 Claude Code 相容性**：內建針對 Claude Code 的 PDF 文件解析轉換與 Tool-Call 訊息順序校正。
@@ -31,7 +31,7 @@ fastapi/
 
 ```powershell
 # 1. 切換至 fastapi 目錄
-cd d:\antigravity\jan\fastapi
+cd D:\claude-code-fastapi-proxy
 
 # 2. 建立 Python 虛擬環境 (使用 uv)
 uv venv
@@ -212,7 +212,7 @@ python main.py
 ## 🧪 常用測試指令 (PowerShell)
 
 > [!TIP]
-> 如果您已在 `config.json` 中將 `"api_key"` 設為 `""`（免金鑰模式），以下測試指令中的金鑰部分（如 `Bearer ...` 或 `X-Api-Key`）可以填入任何字串（例如 `anything` 或是 `jan`），伺服器都會直接放行。
+> 如果您已在 `config.json` 中將 `"api_key"` 設為 `""`（免金鑰模式），以下測試指令中的金鑰部分（如 `Bearer ...` 或 `X-Api-Key`）可以填入任何字串（例如 `anything` 或是 `my-key`），伺服器都會直接放行。
 
 ### 測試模型清單
 ```powershell
